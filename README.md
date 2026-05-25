@@ -29,7 +29,7 @@ It provides interactive pages for analyzing protocols, simulating attacks across
 
 ---
 
-## ⚙️ Technology Stack
+##  Technology Stack
 
 - **Backend:** Flask (Python)
 - **AI Engine:** Custom `explain()` function for contextual answers
