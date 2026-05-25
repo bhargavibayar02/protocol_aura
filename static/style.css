@@ -1,0 +1,237 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: monospace;
+    background: black;
+    color: cyan;
+    overflow-x: hidden;
+}
+
+/* ================= MATRIX BACKGROUND ================= */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid cyan;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: cyan;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+    padding: 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ================= OSI LAYERS ================= */
+.layers {
+    margin-top: 20px;
+}
+
+.layer {
+    border: 1px solid cyan;
+    padding: 12px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.layer:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= HINT BOX ================= */
+.hint-box {
+    height: 30px;
+    margin-top: 10px;
+    color: lime;
+}
+
+/* ================= PROTOCOL LIST ================= */
+.protocol-list {
+    margin-top: 20px;
+    border: 1px solid cyan;
+    padding: 15px;
+}
+
+.protocol-list button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: 1px solid cyan;
+    background: transparent;
+    color: cyan;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.protocol-list button:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= CARD ================= */
+.card {
+    border: 1px solid cyan;
+    padding: 15px;
+    margin-top: 20px;
+    background: rgba(0, 255, 255, 0.05);
+    text-align: left;
+}
+
+/* ================= AI PANEL ================= */
+.ai-box {
+    margin-top: 10px;
+    border: 1px solid cyan;
+    padding: 10px;
+    min-height: 120px;
+    white-space: pre-wrap;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ================= QUIZ ================= */
+.optionBtn {
+    display: block;
+    margin: 6px 0;
+    padding: 8px;
+    border: 1px solid cyan;
+    background: transparent;
+    color: cyan;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.optionBtn:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= BUTTONS ================= */
+button {
+    border: 1px solid cyan;
+    padding: 8px 12px;
+    margin: 5px;
+    background: transparent;
+    color: cyan;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-btn {
+    border: 1px solid cyan;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: cyan;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: cyan;
+    color: black;
+}
+
+/* ================= ATTACK PAGE ================= */
+.layer-buttons button {
+    margin: 8px;
+}
+
+.attack-info {
+    margin-top: 20px;
+    text-align: left;
+    border: 1px solid cyan;
+    padding: 15px;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+/* ================= CANVAS ================= */
+canvas {
+    display: block;
+    margin: 20px auto;
+}
+
+#packetCanvas {
+    border: 1px solid cyan;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#attackCanvas {
+    border: 1px solid cyan;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    border-top: 1px solid cyan;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: cyan;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .layer {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .protocol-list button {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+    <!-- ================= TITLE ================= -->
+    <h1> Protocol Analysis: {{ protocol }}</h1>
+
+    <!-- ================= DETAILS ================= -->
+    {% if result.data %}
+    <div class="card">
+
+        <h3>Layer</h3>
+        <p>{{ result.data.layer }}</p>
+
+        <h3>Overview</h3>
+        <p>{{ result.data.semantics }}</p>
+
+        <h3>Syntax</h3>
+        <pre>{{ result.data.syntax }}</pre>
+
+        <h3>Timing & Performance</h3>
+        <p>{{ result.data.timing }}</p>
+
+        <h3>Attack Analysis</h3>
+        <p>{{ result.data.attack }}</p>
+
+        <h3>Mitigation</h3>
+        <p>{{ result.data.mitigation }}</p>
+
+    </div>
+    {% else %}
+        <p>No data available for this protocol.</p>
+    {% endif %}
+
+
+    <!-- ================= AI PANEL ================= -->
+    <div class="card">
+        <h2> AI Tutor</h2>
+
+        <button onclick="quickAsk('{{ protocol }}','working')">Working</button>
+        <button onclick="quickAsk('{{ protocol }}','attack')">Attacks</button>
+        <button onclick="quickAsk('{{ protocol }}','timing')">Timing</button>
+      
+
+        <div id="aiBox" class="ai-box"></div>
+    </div>
+
+
+    <!-- ================= QUIZ ================= -->
+    <div class="card">
+        <h2> Quiz</h2>
+
+        <button onclick="startQuiz()">Start Quiz</button>
+
+        <div id="quizBox"></div>
+
+        <!-- Hidden quiz data -->
+        <div id="quizDataHolder" style="display:none;">
+            {{ result.data.quiz | tojson }}
+        </div>
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <div class="nav-buttons">
+        <a href="/" class="nav-btn">⬅ Back to Home</a>
+    </div>
+
+</div>
+
+
+<!-- ================= SCRIPT INIT ================= -->
+<script>
+    var quizData = JSON.parse(
+        document.getElementById("quizDataHolder").innerText || "[]"
+    );
+</script>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="/static/ai.js"></script>
+<script src="/static/quiz.js"></script>
+
+{% endblock %}

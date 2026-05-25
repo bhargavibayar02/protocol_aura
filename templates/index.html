@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+    <h1> Protocol Aura</h1>
+    <p>Visualize & Analyze Network Protocols (OSI Model)</p>
+
+    
+    <div id="hintBox" class="hint-box"></div>
+
+
+    <div class="layers">
+
+        <div class="layer"
+            onclick="showProtocols('Application')"
+            onmouseover="showHint('HTTP, DNS, APIs')"
+            onmouseout="hideHint()">
+            Layer 7 - Application
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Presentation')"
+            onmouseover="showHint('TLS, Encryption')"
+            onmouseout="hideHint()">
+            Layer 6 - Presentation
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Session')"
+            onmouseover="showHint('RPC, Session Control')"
+            onmouseout="hideHint()">
+            Layer 5 - Session
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Transport')"
+            onmouseover="showHint('TCP, UDP')"
+            onmouseout="hideHint()">
+            Layer 4 - Transport
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Network')"
+            onmouseover="showHint('IP, Routing')"
+            onmouseout="hideHint()">
+            Layer 3 - Network
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Data Link')"
+            onmouseover="showHint('Ethernet, MAC')"
+            onmouseout="hideHint()">
+            Layer 2 - Data Link
+        </div>
+
+        <div class="layer"
+            onclick="showProtocols('Physical')"
+            onmouseover="showHint('Fiber, Signals')"
+            onmouseout="hideHint()">
+            Layer 1 - Physical
+        </div>
+
+    </div>
+
+    <!-- ================= PROTOCOL LIST ================= -->
+    <div id="protocolList" class="protocol-list">
+        <p> Click a layer to view protocols</p>
+    </div>
+
+    <!-- ================= PACKET FLOW ANIMATION ================= -->
+    <div class="canvas-container">
+        <h3> Packet Flow Simulation</h3>
+        <canvas id="packetCanvas"></canvas>
+    </div>
+
+    <!-- ================= NAVIGATION ================= -->
+    <div class="nav-buttons">
+        <a href="/attack" class="nav-btn">Attack Simulation</a>
+    </div>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="/static/main.js"></script>
+<script src="/static/packet_flow.js"></script>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Protocol Aura</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- ================= MATRIX BACKGROUND ================= -->
+    <canvas id="matrix"></canvas>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <h2> Protocol Aura</h2>
+        </div>
+
+        <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/attack">Attack Lab</a>
+        </div>
+
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2026 Protocol Aura | Network Protocol Visualization System</p>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="/static/matrix.js"></script>
+
+</body>
+
+</html>

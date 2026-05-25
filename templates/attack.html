@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+    <h1>Network Attack Simulation Lab</h1>
+    <p>Select an OSI layer to simulate real-world cyber attacks.</p>
+
+    <!-- ================= LAYER BUTTONS ================= -->
+    <div class="layer-buttons">
+
+        <button onclick="loadAttack('Application')">Application Layer</button>
+        <button onclick="loadAttack('Transport')">Transport Layer</button>
+        <button onclick="loadAttack('Network')">Network Layer</button>
+        <button onclick="loadAttack('Data Link')">Data Link Layer</button>
+        <button onclick="loadAttack('Physical')">Physical Layer</button>
+
+    </div>
+
+    <!-- ================= ANIMATION AREA ================= -->
+    <div class="canvas-container">
+        <canvas id="attackCanvas"></canvas>
+    </div>
+
+    <!-- ================= ATTACK INFO ================= -->
+    <div id="attackInfo" class="attack-info">
+        <p> Select a layer above to view attack simulation...</p>
+    </div>
+
+    <!-- ================= BACK BUTTON ================= -->
+    <div style="margin-top:20px;">
+        <a href="/" class="back-btn">⬅ Back to Home</a>
+    </div>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="/static/attack.js"></script>
+
+{% endblock %}
